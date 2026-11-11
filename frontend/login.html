@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Campus EV Booking</title>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/style.css?v=transit3">
+    <meta name="theme-color" content="#183c31">
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  </head>
+  <body class="auth-page" data-session="user">
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="index.html" aria-label="Campus EV home"><span class="brand-mark" aria-hidden="true"></span>Campus<span class="brand-ev">EV</span></a>
+        <div class="user-tools"><button id="themeToggle" class="quiet small theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch color theme"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button><a class="nav-link" href="index.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#ArrowLeft"></use></svg> Home</a></div>
+      </div>
+    </header>
+    <main id="content" class="shell auth-shell">
+      <div class="auth-card">
+        <section class="auth-form">
+          <p class="eyebrow">Account access</p>
+          <h1 id="loginTitle">Welcome back</h1>
+          <p class="intro">Log in to your Campus EV account. <a href="choose-role.html" id="changeRole" hidden>Change role</a></p>
+          <form id="loginForm">
+            <label for="email">Email</label>
+            <input id="email" type="email" autocomplete="username" placeholder="you@example.com" required>
+            <label for="password">Password</label>
+            <input id="password" type="password" autocomplete="current-password" placeholder="Password" required>
+            <button type="submit">Log in</button>
+            <div id="formMessage" class="info-box" hidden></div>
+            <button id="resendButton" type="button" class="secondary" hidden>Resend verification email</button>
+            <p class="small-text">
+              <a href="forgot-password.html">Forgot password?</a>
+            </p>
+            <p class="small-text">New to Campus EV? <a href="register.html">Create an account</a></p>
+          </form>
+        </section>
+        <aside class="auth-photo" aria-label="Campus shuttle">
+          <img class="campus-photo" src="assets/campus-shuttle.webp" alt="Electric shuttle on a tree-lined campus avenue" width="1200" height="800">
+          <div class="photo-sign"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#BusFront"></use></svg> Campus EV</div>
+        </aside>
+      </div>
+    </main>
+    <script src="js/app.js?v=3"></script>
+    <script src="js/auth.js?v=4"></script>
+  </body>
+</html>

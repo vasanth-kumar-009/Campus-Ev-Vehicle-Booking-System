@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track Your Ride | Campus EV Booking</title>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/style.css?v=transit3">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <meta name="theme-color" content="#183c31">
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  </head>
+  <body class="workspace-page" data-session="user">
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="index.html" aria-label="Campus EV home"><span class="brand-mark" aria-hidden="true"></span>Campus<span class="brand-ev">EV</span></a>
+        <div class="user-tools">
+          <button id="themeToggle" class="quiet small theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch color theme"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button>
+          <span class="who" id="whoami"></span>
+          <button type="button" class="quiet small" id="logoutButton"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#LogOut"></use></svg>Log out</button>
+        </div>
+      </div>
+    </header>
+    <main id="content" class="shell dashboard">
+      <div class="page-title">
+        <p class="eyebrow">Passenger portal</p>
+        <h1>Track your ride</h1>
+      </div>
+      <div class="planner-grid">
+        <section class="panel">
+          <h2 class="panel-heading"><span class="icon-box"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Route"></use></svg></span>Ride details</h2>
+          <div id="status" class="status-box">Loading ride details…</div>
+          <div id="details"></div>
+          <button id="cancelButton" type="button" class="secondary" hidden>Cancel ride</button>
+          <p>
+            <a href="booking.html">← Back to bookings</a>
+          </p>
+        </section>
+        <section class="panel">
+          <h2 class="panel-heading"><span class="icon-box"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Map"></use></svg></span>Ride map</h2>
+          <div id="map" class="map-box"></div>
+        </section>
+      </div>
+    </main>
+    <script src="js/app.js?v=3"></script>
+    <script src="js/campus-config.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/tracking.js"></script>
+  </body>
+</html>

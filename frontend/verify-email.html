@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify email | Campus EV Booking</title>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/style.css?v=transit3">
+    <meta name="theme-color" content="#183c31">
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  </head>
+  <body class="auth-page" data-session="user">
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="index.html" aria-label="Campus EV home"><span class="brand-mark" aria-hidden="true"></span>Campus<span class="brand-ev">EV</span></a>
+        <div class="user-tools"><button id="themeToggle" class="quiet small theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch color theme"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button><a class="nav-link" href="index.html"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#ArrowLeft"></use></svg> Home</a></div>
+      </div>
+    </header>
+    <main id="content" class="shell auth-shell">
+      <div class="auth-card">
+        <section class="auth-form">
+          <p class="eyebrow">Account access</p>
+          <h1>Verify your email</h1>
+          <div id="verifyBox" class="panel">
+            <p>Verifying your email address…</p>
+            <div id="formMessage" class="info-box" hidden></div>
+            <p>
+              <a class="button-link" href="login.html">Go to login</a>
+            </p>
+          </div>
+        </section>
+        <aside class="auth-photo" aria-label="Campus shuttle">
+          <img class="campus-photo" src="assets/campus-shuttle.webp" alt="Electric shuttle on a tree-lined campus avenue" width="1200" height="800">
+          <div class="photo-sign"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#BusFront"></use></svg> Campus EV</div>
+        </aside>
+      </div>
+    </main>
+    <script src="js/app.js?v=3"></script>
+    <script src="js/auth.js?v=3"></script>
+  </body>
+</html>

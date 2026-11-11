@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Campus EV Booking</title>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/style.css?v=transit3">
+    <meta name="theme-color" content="#183c31">
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  </head>
+  <body class="workspace-page" data-session="user">
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="index.html" aria-label="Campus EV home"><span class="brand-mark" aria-hidden="true"></span>Campus<span class="brand-ev">EV</span></a>
+        <div class="user-tools">
+          <button id="themeToggle" class="quiet small theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch color theme"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button>
+          <span class="who" id="whoami"></span>
+          <button type="button" class="quiet small" id="logoutButton"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#LogOut"></use></svg>Log out</button>
+        </div>
+      </div>
+    </header>
+    <main id="content" class="shell dashboard">
+      <div class="page-title">
+        <p class="eyebrow">Administration</p>
+        <h1>Campus operations</h1>
+      </div>
+      <div class="admin-grid">
+        <nav class="tabs" aria-label="Administration">
+          <button type="button" data-tab="overview"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#LayoutDashboard"></use></svg>Overview</button>
+          <button type="button" data-tab="drivers"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Users"></use></svg>Drivers</button>
+          <button type="button" data-tab="vehicles"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#BusFront"></use></svg>Vehicles</button>
+          <button type="button" data-tab="bookings"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Route"></use></svg>Bookings</button>
+          <button type="button" data-tab="walletRequests"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Wallet"></use></svg>Wallet requests</button>
+          <button type="button" data-tab="users"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#CircleUserRound"></use></svg>Users &amp; wallets</button>
+          <button type="button" data-tab="admins"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#ShieldCheck"></use></svg>Admins</button>
+        </nav>
+        <section class="panel admin-panel">
+          <h2 id="adminTitle">Overview</h2>
+          <div id="adminView" aria-live="polite"></div>
+        </section>
+      </div>
+    </main>
+    <script src="js/app.js?v=3"></script>
+    <script src="js/campus-config.js"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>

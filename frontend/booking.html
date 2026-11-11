@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Campus Ride | Campus EV Booking</title>
+    <script src="js/theme.js"></script>
+    <link rel="stylesheet" href="css/style.css?v=transit3">
+    <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+    <script src="vendor/leaflet/leaflet.js"></script>
+    <meta name="theme-color" content="#183c31">
+    <link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+  </head>
+  <body class="workspace-page" data-session="user">
+    <a class="skip" href="#content">Skip to content</a>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="index.html" aria-label="Campus EV home"><span class="brand-mark" aria-hidden="true"></span>Campus<span class="brand-ev">EV</span></a>
+        <div class="user-tools">
+          <button id="themeToggle" class="quiet small theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false" title="Switch color theme"><span class="theme-moon" aria-hidden="true">☾</span><span class="theme-sun" aria-hidden="true">☀</span></button>
+          <span class="who" id="whoami"></span>
+          <button type="button" class="quiet small" id="logoutButton"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#LogOut"></use></svg>Log out</button>
+        </div>
+      </div>
+    </header>
+    <main id="content" class="shell dashboard">
+      <div class="page-title">
+        <p class="eyebrow">Passenger portal</p>
+        <h1>Book a ride</h1>
+      </div>
+      <div class="planner-grid">
+        <section class="panel">
+          <h2 class="panel-heading"><span class="icon-box"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Route"></use></svg></span>Plan your trip</h2>
+          <p id="staffRideInfo" hidden>Campus EV rides are free for staff.</p>
+          <form id="bookingForm">
+            <label for="pickup">Pickup</label>
+            <select id="pickup" required></select>
+            <label for="drop">Drop</label>
+            <select id="drop" required></select>
+            <div class="pair">
+              <div>
+                <label for="vehicleType">Vehicle</label>
+                <select id="vehicleType">
+                  <option value="any">Any (nearest)</option>
+                  <option value="auto">Auto (up to 3)</option>
+                  <option value="bus">Shared bus</option>
+                </select>
+              </div>
+              <div>
+                <label for="seats">Seats</label>
+                <input id="seats" type="number" min="1" max="20" value="1" required>
+              </div>
+            </div>
+            <div id="paymentFields" hidden>
+              <label for="paymentMethod">Payment</label>
+              <select id="paymentMethod">
+                <option value="cash">Cash to driver</option>
+                <option value="wallet">Campus wallet</option>
+              </select>
+            </div>
+            <p id="estimate" class="muted">Choose pickup and drop to see your estimate.</p>
+            <button type="submit">Request a ride</button>
+          </form>
+          <div id="bookingMessage" class="info-box" hidden></div>
+        </section>
+        <section class="panel">
+          <h2 class="panel-heading"><span class="icon-box"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Map"></use></svg></span>Campus map</h2>
+          <div id="map" class="map-box"></div>
+        </section>
+      </div>
+      <div class="history-grid">
+        <section class="panel">
+          <h2 class="panel-heading"><span class="icon-box"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#History"></use></svg></span>Ride history</h2>
+          <div id="bookingsList"></div>
+        </section>
+        <section id="studentWallet" class="panel" hidden>
+          <h2 class="panel-heading"><span class="icon-box"><svg class="icon" aria-hidden="true" focusable="false"><use href="assets/icons.svg#Wallet"></use></svg></span>My wallet</h2>
+          <p id="walletInfo"></p>
+          <p id="requestStatus" role="status"></p>
+          <form id="topupForm">
+            <label for="topupAmount">Amount to request (₹)</label>
+            <input id="topupAmount" type="number" min="1" max="100000" step="1" required>
+            <button type="submit">Request top-up</button>
+          </form>
+        </section>
+      </div>
+      <details class="panel">
+        <summary>Account settings</summary>
+        <form id="deleteAccountForm">
+          <h2>Delete my account</h2>
+          <p>Deletion is permanent. Ride history is kept. <span id="walletDeletionNote" hidden>Any remaining wallet credit will be lost.</span></p>
+          <label for="deletePassword">Current password</label>
+          <input id="deletePassword" type="password" autocomplete="current-password" required>
+          <button type="submit">Delete my account</button>
+          <p id="deleteMessage" role="status"></p>
+        </form>
+      </details>
+    </main>
+    <script src="js/app.js?v=3"></script>
+    <script src="js/campus-config.js"></script>
+    <script src="js/map.js"></script>
+    <script src="js/geolocation.js"></script>
+    <script src="js/booking.js"></script>
+    <script src="js/account.js"></script>
+  </body>
+</html>

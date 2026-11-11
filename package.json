@@ -1,0 +1,11 @@
+{
+  "name": "campus-ev-booking",
+  "private": true,
+  "description": "Convenience scripts so you can run everything from the repository root",
+  "scripts": {
+    "install:backend": "npm --prefix backend install",
+    "start": "npm --prefix backend start",
+    "dev": "npm --prefix backend run dev",
+    "test": "npm --prefix backend test"
+  }
+}
