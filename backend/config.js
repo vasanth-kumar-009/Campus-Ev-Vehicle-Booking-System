@@ -92,6 +92,8 @@ const cfg = {
   },
 
   // Email (optional). Without SMTP, links are printed to the console in development only.
+  googleScript: env.GOOGLE_SCRIPT_URL || env.GOOGLE_SCRIPT_SECRET
+    ? { url: env.GOOGLE_SCRIPT_URL || '', secret: env.GOOGLE_SCRIPT_SECRET } : null,
   smtp: env.SMTP_HOST
     ? {
         host: env.SMTP_HOST,
@@ -101,7 +103,7 @@ const cfg = {
       }
     : null,
   mailFrom: env.MAIL_FROM || 'Campus EV <no-reply@campus-ev.local>',
-  requireEmailVerification: bool(env.EMAIL_VERIFICATION_REQUIRED, !!env.SMTP_HOST),
+  requireEmailVerification: bool(env.EMAIL_VERIFICATION_REQUIRED, !!(env.SMTP_HOST || env.GOOGLE_SCRIPT_URL)),
 
   maxFailedLogins: 5,
   lockMinutes: 15
